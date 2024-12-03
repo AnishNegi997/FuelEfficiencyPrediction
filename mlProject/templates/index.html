@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Vehicle Fuel Efficiency Prediction</title>
+</head>
+<body>
+    <h1>Vehicle Fuel Efficiency Prediction</h1>
+    <form id="predictionForm">
+        <label for="fuelCost">Fuel Cost:</label>
+        <input type="text" id="fuelCost" name="fuelCost" required><br><br>
+
+        <label for="CO2">CO2:</label>
+        <input type="text" id="CO2_log" name="CO2_log" required><br><br>
+
+        <label for="cylinders">Cylinders:</label>
+        <input type="text" id="cylinders" name="cylinders" required><br><br>
+
+        <label for="displ">Displacement:</label>
+        <input type="text" id="displ" name="displ" required><br><br>
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" required><br><br>
+
+        <label for="fuelType">Fuel Type:</label>
+        <select id="fuelType" name="fuelType" required>
+            <option value="Regular">Regular</option>
+            <option value="Premium">Premium</option>
+            <option value="Diesel">Diesel</option>
+            <option value="CNG">CNG</option>
+            <option value="Gasoline or natural gas">Gasoline or natural gas</option>
+            <option value="Gasoline or E85">Gasoline or E85</option>
+            <option value="Gasoline or propane">Gasoline or propane</option>
+            <option value="Premium or E85">Premium or E85</option>
+            <option value="Midgrade">Midgrade</option>
+            <option value="Premium Gas or Electricity">Premium Gas or Electricity</option>
+            <option value="Premium and Electricity">Premium and Electricity</option>
+            <option value="Regular Gas and Electricity">Regular Gas and Electricity</option>
+        </select><br><br>
+
+        <label for="VClass">Vehicle Class:</label>
+        <select id="VClass" name="VClass" required>
+            <option value="Two Seaters">Two Seaters</option>
+            <option value="Subcompact Cars">Subcompact Cars</option>
+            <option value="Vans">Vans</option>
+            <option value="Compact Cars">Compact Cars</option>
+            <option value="Midsize Cars">Midsize Cars</option>
+            <option value="Large Cars">Large Cars</option>
+            <option value="Small Station Wagons">Small Station Wagons</option>
+            <option value="Midsize-Large Station Wagons">Midsize-Large Station Wagons</option>
+            <option value="Small Pickup Trucks">Small Pickup Trucks</option>
+            <option value="Standard Pickup Trucks">Standard Pickup Trucks</option>
+        </select><br><br>
+
+        <label for="make">Make:</label>
+        <select id="make" name="make" required>
+            <option value="Acura">Acura</option>
+            <option value="AM General">AM General</option>
+            <option value="American Motors Corporation">American Motors Corporation</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Audi">Audi</option>
+            <option value="Aurora Cars Ltd">Aurora Cars Ltd</option>
+            <option value="Bertone">Bertone</option>
+            <option value="Bentley">Bentley</option>
+            <option value="BMW">BMW</option>
+            <option value="BMW Alpina">BMW Alpina</option>
+            <option value="Buick">Buick</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Chrysler">Chrysler</option>
+            <option value="Consulier Industries Inc">Consulier Industries Inc</option>
+            <option value="CX Automotive">CX Automotive</option>
+            <option value="Daewoo">Daewoo</option>
+            <option value="Daimler">Daimler</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Eagle">Eagle</option>
+            <option value="Environmental Rsch and Devp Corp">Environmental Rsch and Devp Corp</option>
+            <option value="Excalibur Autos">Excalibur Autos</option>
+            <option value="Fisker">Fisker</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Ford">Ford</option>
+            <option value="General Motors">General Motors</option>
+            <option value="Geo">Geo</option>
+            <option value="GMC">GMC</option>
+            <option value="Grumman Allied Industries">Grumman Allied Industries</option>
+            <option value="Grumman Olson">Grumman Olson</option>
+            <option value="Honda">Honda</option>
+            <option value="Hummer">Hummer</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Isis Imports Ltd">Isis Imports Ltd</option>
+            <option value="Isuzu">Isuzu</option>
+            <option value="Infiniti">Infiniti</option>
+            <option value="J.B.A Motorcars, Inc.">JBA Motorcars, Inc.</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Karma">Karma</option>
+            <option value="Kenyon Corporation Of America">Kenyon Corporation Of America</option>
+            <option value="Kia">Kia</option>
+            <option value="Koenigsegg">Koenigsegg</option>
+            <option value="Laforza Automobile Inc">Laforza Automobile Inc</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Lincoln">Lincoln</option>
+            <option value="Lotus">Lotus</option>
+            <option value="Maserati">Maserati</option>
+            <option value="McLaren Automotive">McLaren Automotive</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="MINI">MINI</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Mercury">Mercury</option>
+            <option value="MINI">MINI</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Pininfarina">Pininfarina</option>
+            <option value="Pontiac">Pontiac</option>
+            <option value="Polestar">Polestar</option>
+            <option value="Plymouth">Plymouth</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Qvale">Qvale</option>
+            <option value="RAM">RAM</option>
+            <option value="Renault">Renault</option>
+            <option value="Roush Performance">Roush Performance</option>
+            <option value="Rolls-Royce">Rolls-Royce</option>
+            <option value="Ruf Automobile">Ruf Automobile</option>
+            <option value="Saleen">Saleen</option>
+            <option value="Scion">Scion</option>
+            <option value="Shelby">Shelby</option>
+            <option value="Smart">Smart</option>
+            <option value="Subaru">Subaru</option>
+            <option value="SRT">SRT</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Toyota">Toyota</option>
+            <option value="TVR Engineering Ltd">TVR Engineering Ltd</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Volga Associated Automobile">Volga Associated Automobile</option>
+            <option value="Volvo">Volvo</option>
+            <option value="VPG">VPG</option>
+            <option value="Wallace Environmental">Wallace Environmental</option>
+            <option value="Yugo">Yugo</option>
+        </select><br><br>
+        
+        <button type="submit">Predict</button>
+    </form>
+
+    <div class="result-section" id="resultSection">
+        <p>Predicted Fuel Efficiency (MPG): <span id="predictionResult">Loading...</span></p>
+    </div>
+
+    <script>
+        // Handle form submission asynchronously using AJAX
+        document.getElementById('predictionForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+
+            var formData = new FormData(this);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('resultSection').style.display = 'block';  // Show result section
+                document.getElementById('predictionResult').textContent = data.prediction;  // Display prediction
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
