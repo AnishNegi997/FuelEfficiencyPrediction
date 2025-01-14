@@ -18,8 +18,8 @@ This project predicts the fuel efficiency of vehicles based on various features 
 ## ⚙️ Setup Instructions
 ### Clone the repository:
 ```bash
-git clone https://github.com/your-username/fuel-efficiency-prediction.git
-cd fuel-efficiency-prediction
+git clone https://github.com/AnishNegi997/FuelEfficiencyPrediction.git
+cd FuelEfficiencyPrediction
 ```
 
 ### Install dependencies:
