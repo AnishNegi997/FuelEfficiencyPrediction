@@ -16,19 +16,6 @@ This project predicts the fuel efficiency of vehicles based on various features 
 - Machine Learning: scikit-learn, pandas, numpy
 - Data Visualization: matplotlib, seaborn
 
-## 📂 Project Structure
-```bash
-mlProject/
-│
-├── static/                 # CSS, images, and static assets
-├── templates/              # HTML files for the web interface
-├── app.py                  # Main Flask application
-├── models/                 # Pre-trained ML models
-├── dataset.csv/                   # Dataset used for training
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-```
-
 ## ⚙️ Setup Instructions
 ### Clone the repository:
 ```bash
